@@ -1,0 +1,108 @@
+/*
+ * CARDS
+*/
+
+.wrapper {
+	text-align: center;
+
+	.header {
+		margin-bottom: $space;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+
+		.player-heading {
+			font-family: $font-headline;
+			font-weight: 700;
+			text-align: center;
+			margin: $space / 2;
+			z-index: 3;
+			left: 0;
+			font-size: 44px;
+			padding: 10px;
+		}
+
+		.start-game-button {
+			background-color: $light;
+			color: $dark;
+			z-index: 3;
+			padding: 14px 20px;
+			font-size: 20px;
+			font-weight: 700;
+
+			.click-here {
+				font-size: 10px;
+				margin: 0;
+				color: $dark;
+				font-family: $font-main;
+			}
+		}
+	}
+
+	.cards {
+		@include center-flex;
+
+		.card {
+			cursor: pointer;
+			color: white;
+			padding: $space;
+			margin: $space;
+			text-align: center;
+			width: 200px;
+			height: 300px;
+			border: 2px solid black;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			position: relative;
+
+			p {
+				pointer-events: none;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				margin: 2px;
+			}
+
+			.gender {
+				.gender-sign {
+					font-size: 24px;
+				}
+			}
+
+			.badge1 {
+				@include badge;
+				color: $dark;
+				background-color: $brand-color3;
+
+				&:after {
+					content: 'Player 1';
+				}
+			}
+
+			.badge2 {
+				@include badge;
+				background-color: $brand-color2;
+
+				&:after {
+					content: 'Player 2';
+				}
+			}
+		}
+	}
+}
+
+.overlay {
+	border: 20px solid $brand-color1;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: linear-gradient(0deg, rgb(0, 0, 0) 0%, #ffffff00 50%);
+	z-index: 2;
+}
