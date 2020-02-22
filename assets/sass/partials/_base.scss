@@ -1,0 +1,54 @@
+/*
+ * BASE
+*/
+body {
+	font-family: $font-main;
+	background: url('../images/trees-3458478_1920-pixabay-com.jpg');
+	background-position: center center;
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6, p, a  {
+	font-family: $font-main;
+	color: $light;
+}
+
+h1 {
+	font-size: 61px;
+	font-weight: 500;
+	color: $light;
+	font-family: $font-headline;
+}
+
+h2 {
+	font-size: 51px;
+	font-weight: 500;
+	font-family: $font-headline;
+}
+
+h3 {
+	font-size: 41px;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 31px;
+}
+
+h5 {
+	font-size: 21px;
+}
+
+h6 {
+	font-size: 11px;
+}
+
+p {
+	font-size: 16px;
+}
+
+a {
+	color: $light;
+}

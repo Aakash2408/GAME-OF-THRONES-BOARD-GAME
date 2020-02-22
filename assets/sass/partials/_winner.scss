@@ -1,0 +1,72 @@
+/*
+ * WINNER
+*/
+
+.winner {
+	margin-top: $space;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.trophy {
+		position: relative;
+		display: inline-block;
+
+		.shield-winner {
+			position: absolute;
+			top: 109px;
+			left: 129px;
+
+			img {
+				animation: animateShield 1s 1 0s ease-out;
+			}
+		}
+
+		.star {
+			position: absolute;
+			top: -10px;
+			left: 30px;
+			animation: animateStar 6s 2 0s linear;
+		}
+
+		.name-winner {
+			position: absolute;
+			top: 474px;
+			left: 0;
+			right: 0;
+
+			.winner-name {
+				color: slategrey;
+				font-size: 16px;
+				font-family: "Cinzel Decorative", cursive;
+				font-weight: 600;
+				text-shadow: 0 1px 0 $light;
+				animation: animateShield 1s 1 0s ease;
+			}
+		}
+	}
+}
+
+@keyframes animateShield {
+	0% {
+		transform: scale(50);
+	}
+	90% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes animateStar{
+	0%{
+		transform: rotate(0deg) scale(0);
+	}
+	50%{
+		transform: rotate(360deg) scale(1.0);
+	}
+	100%{
+		transform: rotate(720deg) scale(0);
+	}
+}

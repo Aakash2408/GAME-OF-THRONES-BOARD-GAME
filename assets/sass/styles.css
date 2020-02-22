@@ -1,0 +1,812 @@
+/*
+ * VARIABLES
+*/
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Source+Sans+Pro");
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/*
+ * BASE
+*/
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background: url("../images/trees-3458478_1920-pixabay-com.jpg");
+  background-position: center center;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-size: cover; }
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fff; }
+
+h1 {
+  font-size: 61px;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Cinzel Decorative", cursive; }
+
+h2 {
+  font-size: 51px;
+  font-weight: 500;
+  font-family: "Cinzel Decorative", cursive; }
+
+h3 {
+  font-size: 41px;
+  font-weight: 500; }
+
+h4 {
+  font-size: 31px; }
+
+h5 {
+  font-size: 21px; }
+
+h6 {
+  font-size: 11px; }
+
+p {
+  font-size: 16px; }
+
+a {
+  color: #fff; }
+
+/*
+ * MIXINS
+*/
+.font-headline {
+  font-family: "Cinzel Decorative", cursive; }
+
+.font-main {
+  font-family: "Source Sans Pro", sans-serif; }
+
+.margin {
+  margin: 20px; }
+
+.margin-top {
+  margin-top: 20px; }
+
+/*
+ * GAME
+*/
+.players {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  .players .player-container {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .players .player-container p {
+      color: #fff;
+      font-size: 20px; }
+  .players .vs {
+    padding: 44px 20px; }
+
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative; }
+  .game-container .dice-container {
+    width: 200px;
+    position: relative; }
+    @media screen and (max-width: 1100px) {
+      .game-container .dice-container {
+        width: unset; } }
+    .game-container .dice-container .dice2button {
+      background-color: grey; }
+  @media screen and (max-width: 1100px) {
+    .game-container .player1-dice-container {
+      order: 1; }
+      .game-container .player1-dice-container p {
+        display: none; }
+    .game-container .player2-dice-container {
+      order: 2; }
+      .game-container .player2-dice-container p {
+        display: none; }
+    .game-container .game-wrapper {
+      order: 3;
+      z-index: 1; } }
+  .game-container .gamelog {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    text-align: center;
+    width: 100%; }
+    .game-container .gamelog p {
+      margin: 0; }
+  .game-container .game-wrapper {
+    position: relative; }
+    .game-container .game-wrapper .start-banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 5px 5px 3px 0 #262626;
+      opacity: .5;
+      color: #fff;
+      font-family: "Cinzel Decorative", cursive;
+      font-weight: 700;
+      z-index: 1;
+      width: 270px;
+      height: 50px;
+      position: absolute;
+      background-color: #1A4D8C;
+      transform: rotate(-10deg);
+      font-size: 30px;
+      top: -15px;
+      left: -50px; }
+      @media screen and (max-width: 1100px) {
+        .game-container .game-wrapper .start-banner {
+          display: none; } }
+    .game-container .game-wrapper .finish-banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 5px 5px 3px 0 #262626;
+      opacity: .5;
+      color: #fff;
+      font-family: "Cinzel Decorative", cursive;
+      font-weight: 700;
+      z-index: 1;
+      width: 270px;
+      height: 50px;
+      position: absolute;
+      background-color: #1A4D8C;
+      transform: rotate(-10deg);
+      font-size: 30px;
+      bottom: 7px;
+      right: -20px; }
+      @media screen and (max-width: 1100px) {
+        .game-container .game-wrapper .finish-banner {
+          display: none; } }
+    .game-container .game-wrapper .game-area {
+      background-image: url("../images/game_background.png");
+      width: 700px;
+      height: 500px;
+      position: relative;
+      box-shadow: 0 0 20px 3px #262626; }
+      .game-container .game-wrapper .game-area .gameshield {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 50px;
+        transform: rotate(10deg);
+        transition: all .5s ease-in-out; }
+      .game-container .game-wrapper .game-area .obstacle-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .game-container .game-wrapper .game-area .obstacle-container .obstacle {
+          z-index: 3;
+          height: 440px;
+          width: 660px;
+          background-image: url(../images/bang.svg);
+          background-position: center;
+          background-size: cover;
+          opacity: 0;
+          transition: all .4s ease-in-out;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          .game-container .game-wrapper .game-area .obstacle-container .obstacle .obstacle-text {
+            color: #F76B1C;
+            margin: 10px; }
+          .game-container .game-wrapper .game-area .obstacle-container .obstacle .obstacle-text1 {
+            transform: rotate(-7deg) translateX(-40px);
+            font-size: 90px; }
+          .game-container .game-wrapper .game-area .obstacle-container .obstacle .obstacle-text2 {
+            font-size: 53px;
+            text-decoration: underline;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 1px black;
+            margin-top: -14px; }
+          .game-container .game-wrapper .game-area .obstacle-container .obstacle .obstacle-text3 {
+            transform: rotate(-5deg); }
+    @media screen and (max-width: 730px) {
+      .game-container .game-wrapper {
+        transform: scale(0.6); } }
+    @media screen and (max-width: 445px) {
+      .game-container .game-wrapper {
+        transform: scale(0.4);
+        transform-origin: top;
+        margin-top: 20px; } }
+
+.logo {
+  width: 290px;
+  background: #fff;
+  padding: 20px;
+  z-index: 4;
+  position: absolute;
+  transform: translateX(-320px);
+  transition: 1s ease; }
+  .logo:hover {
+    transform: translateX(0); }
+
+.animate-logo {
+  animation: animateLogo 3s 1 0s ease; }
+
+@keyframes animateLogo {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-320px); } }
+@media screen and (max-width: 730px) {
+  .player-container {
+    padding: 0 5px !important; }
+
+  .margin {
+    margin: 2px; }
+
+  .shield {
+    width: 70px !important; }
+
+  .vs h2 {
+    font-size: 30px; } }
+.instructions-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000000f0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .instructions-container .instructions {
+    background: black;
+    padding: 20px;
+    box-shadow: 0 0 174px 62px; }
+    @media screen and (max-width: 1100px) {
+      .instructions-container .instructions p {
+        font-size: 26px; } }
+
+.gamelog, .position {
+  display: none !important; }
+
+.start-here {
+  color: white;
+  font-size: 20px;
+  animation: startAnimation 1s infinite 1s ease; }
+
+@keyframes startAnimation {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.2); } }
+/*
+ * WINNER
+*/
+.winner {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .winner .trophy {
+    position: relative;
+    display: inline-block; }
+    .winner .trophy .shield-winner {
+      position: absolute;
+      top: 109px;
+      left: 129px; }
+      .winner .trophy .shield-winner img {
+        animation: animateShield 1s 1 0s ease-out; }
+    .winner .trophy .star {
+      position: absolute;
+      top: -10px;
+      left: 30px;
+      animation: animateStar 6s 2 0s linear; }
+    .winner .trophy .name-winner {
+      position: absolute;
+      top: 474px;
+      left: 0;
+      right: 0; }
+      .winner .trophy .name-winner .winner-name {
+        color: slategrey;
+        font-size: 16px;
+        font-family: "Cinzel Decorative", cursive;
+        font-weight: 600;
+        text-shadow: 0 1px 0 #fff;
+        animation: animateShield 1s 1 0s ease; }
+
+@keyframes animateShield {
+  0% {
+    transform: scale(50); }
+  90% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+@keyframes animateStar {
+  0% {
+    transform: rotate(0deg) scale(0); }
+  50% {
+    transform: rotate(360deg) scale(1); }
+  100% {
+    transform: rotate(720deg) scale(0); } }
+/*
+ * CARDS
+*/
+.wrapper {
+  text-align: center; }
+  .wrapper .header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .wrapper .header .player-heading {
+      font-family: "Cinzel Decorative", cursive;
+      font-weight: 700;
+      text-align: center;
+      margin: 10px;
+      z-index: 3;
+      left: 0;
+      font-size: 44px;
+      padding: 10px; }
+    .wrapper .header .start-game-button {
+      background-color: #fff;
+      color: #262626;
+      z-index: 3;
+      padding: 14px 20px;
+      font-size: 20px;
+      font-weight: 700; }
+      .wrapper .header .start-game-button .click-here {
+        font-size: 10px;
+        margin: 0;
+        color: #262626;
+        font-family: "Source Sans Pro", sans-serif; }
+  .wrapper .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .wrapper .cards .card {
+      cursor: pointer;
+      color: white;
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      width: 200px;
+      height: 300px;
+      border: 2px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      position: relative; }
+      .wrapper .cards .card p {
+        pointer-events: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin: 2px; }
+      .wrapper .cards .card .gender .gender-sign {
+        font-size: 24px; }
+      .wrapper .cards .card .badge1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 5px 5px 3px 0 #262626;
+        font-family: "Cinzel Decorative", cursive;
+        font-weight: 700;
+        width: 270px;
+        height: 50px;
+        position: absolute;
+        top: 127px;
+        background-color: #1b4d8c;
+        transform: rotate(-10deg);
+        font-size: 30px;
+        color: #262626;
+        background-color: #FAD961; }
+        .wrapper .cards .card .badge1:after {
+          content: 'Player 1'; }
+      .wrapper .cards .card .badge2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 5px 5px 3px 0 #262626;
+        font-family: "Cinzel Decorative", cursive;
+        font-weight: 700;
+        width: 270px;
+        height: 50px;
+        position: absolute;
+        top: 127px;
+        background-color: #1b4d8c;
+        transform: rotate(-10deg);
+        font-size: 30px;
+        background-color: #1A4D8C; }
+        .wrapper .cards .card .badge2:after {
+          content: 'Player 2'; }
+
+.overlay {
+  border: 20px solid #5382BF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, black 0%, #ffffff00 50%);
+  z-index: 2; }
+
+/*
+ * FIREWORKS
+*/
+#fireworks-template {
+  display: none; }
+
+#fireContainer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 706; }
+
+.firework {
+  /* containing box which flies out first */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 1px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #333;
+  background: #666; }
+
+.fireworkParticle {
+  /* elements that explode from the container */
+  position: absolute;
+  font-size: 1px;
+  width: 10px;
+  height: 10px;
+  overflow: hidden; }
+
+.fireworkParticle img {
+  display: block;
+  width: 100px; }
+
+/*
+ * BUTTON
+*/
+button,
+.button,
+a.button,
+.submit {
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  background-color: #1A4D8C;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none; }
+  @media screen and (max-width: 1100px) {
+    button,
+    .button,
+    a.button,
+    .submit {
+      padding: 60px 60px;
+      font-size: 33px;
+      font-weight: 700; } }
+  button:focus, button:hover,
+  .button:focus,
+  .button:hover,
+  a.button:focus,
+  a.button:hover,
+  .submit:focus,
+  .submit:hover {
+    background: #123561; }
+
+.shield {
+  width: 100px;
+  transition: all .2s; }
+
+/*# sourceMappingURL=styles.css.map */

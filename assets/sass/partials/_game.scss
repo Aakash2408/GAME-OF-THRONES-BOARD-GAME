@@ -1,0 +1,262 @@
+/*
+ * GAME
+*/
+
+.players {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+
+	.player-container {
+		padding: 0 $space;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		p {
+			color: $light;
+			font-size: 20px;
+		}
+	}
+
+	.vs {
+		padding: 44px $space;
+	}
+}
+
+.game-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	position: relative;
+
+	.dice-container {
+		width: 200px;
+		position: relative;
+		@media screen and (max-width: 1100px) {
+			width: unset;
+		}
+
+		.dice2button {
+			background-color: grey;
+		}
+	}
+
+	@media screen and (max-width: 1100px) {
+
+		.player1-dice-container {
+			order: 1;
+
+			p {
+				display: none
+			}
+		}
+
+		.player2-dice-container {
+			order: 2;
+
+			p {
+				display: none
+			}
+		}
+
+		.game-wrapper {
+			order: 3;
+			z-index: 1;
+		}
+	}
+
+	.gamelog {
+		display: flex;
+		flex-direction: column-reverse;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.game-wrapper {
+		position: relative;
+
+		.start-banner {
+			@include banner;
+			top: -15px;
+			left: -50px;
+		}
+
+		.finish-banner {
+			@include banner;
+			bottom: 7px;
+			right: -20px;
+		}
+
+		.game-area {
+			background-image: url("../images/game_background.png");
+			width: 700px;
+			height: 500px;
+			position: relative;
+			box-shadow: 0 0 20px 3px $dark;
+
+			.gameshield {
+				position: absolute;
+				top: 25px;
+				left: 25px;
+				width: 50px;
+				transform: rotate(10deg);
+				transition: all .5s ease-in-out;
+			}
+
+			.obstacle-container {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.obstacle {
+					z-index: 3;
+					height: 440px;
+					width: 660px;
+					background-image: url(../images/bang.svg);
+					background-position: center;
+					background-size: cover;
+					opacity: 0;
+					transition: all .4s ease-in-out;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+
+					.obstacle-text {
+						color: $brand-color4;
+						margin: 10px;
+					}
+
+					.obstacle-text1 {
+						transform: rotate(-7deg) translateX(-40px);
+						font-size: 90px;
+					}
+
+					.obstacle-text2 {
+						font-size: 53px;
+						text-decoration: underline;
+						letter-spacing: 2px;
+						text-shadow: 1px 1px 1px black;
+						margin-top: -14px;
+					}
+
+					.obstacle-text3 {
+						transform: rotate(-5deg);
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 730px) {
+			transform: scale(.6);
+		}
+		@media screen and (max-width: 445px) {
+			transform: scale(.4);
+			transform-origin: top;
+			margin-top: 20px;
+		}
+	}
+}
+
+.logo {
+	width: 290px;
+	background: $light;
+	padding: $space;
+	z-index: 4;
+	position: absolute;
+	transform: translateX(-320px);
+	transition: 1s ease;
+
+	&:hover {
+		transform: translateX(0);
+	}
+}
+
+.animate-logo {
+	animation: animateLogo 3s 1 0s ease;
+}
+
+@keyframes animateLogo {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-320px);
+	}
+}
+
+@media screen and (max-width: 730px) {
+	.player-container {
+		padding: 0 5px !important;
+	}
+
+	.margin {
+		margin: 2px;
+	}
+
+	.shield {
+		width: 70px !important;
+	}
+
+	.vs {
+		h2 {
+			font-size: 30px;
+		}
+	}
+}
+
+.instructions-container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: #000000f0;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.instructions {
+		background: black;
+		padding: 20px;
+		box-shadow: 0 0 174px 62px;
+
+		p {
+			@media screen and (max-width: 1100px) {
+				font-size: 26px;
+			}
+		}
+	}
+}
+
+.gamelog, .position {
+	display: none !important;
+}
+
+.start-here {
+	color: white;
+	font-size: $space;
+	animation: startAnimation 1s infinite 1s ease;
+}
+
+@keyframes startAnimation {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.2);
+	}
+}

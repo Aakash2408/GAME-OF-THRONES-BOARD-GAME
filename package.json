@@ -1,0 +1,19 @@
+{
+  "name": "game-of-thrones-board-game-freelancing",
+  "version": "1.0.0",
+  "description": "Board Game for Game of thrones Characters",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aakash2408/GAME-OF-THRONES-BOARD-GAME-FREELANCING.git"
+  },
+  "author": "Aakash Sangwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aakash2408/GAME-OF-THRONES-BOARD-GAME-FREELANCING/issues"
+  },
+  "homepage": "https://github.com/Aakash2408/GAME-OF-THRONES-BOARD-GAME-FREELANCING#readme"
+}
