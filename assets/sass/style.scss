@@ -1,0 +1,20 @@
+/*
+ * SASS
+ *
+ * sass --watch styles.scss:styles.css
+ *
+ * https://www.tutorialspoint.com/sass/sass_overview.htm
+ *
+ * Thomas Karl Andersson
+*/
+
+@import "partials/variables";
+@import "partials/normalize";
+@import "partials/base";
+@import "partials/mixins";
+@import "partials/game";
+@import "partials/winner";
+@import "partials/cards";
+@import "partials/components/fireworks";
+@import "partials/components/button";
+@import "partials/components/shields";
